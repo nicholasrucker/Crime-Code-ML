@@ -5,7 +5,7 @@ from sklearn import metrics
 
 dataSet = pd.read_csv("cleanData/cleanedCrimes.csv")
 
-data = dataSet.iloc[:, [9, 10, 11, 12, 13, 14, 20, 21, 25, 27, 29, 30]]
+data = dataSet.iloc[:, [9, 10, 11, 12, 13, 14, 20, 21, 25, 27, 29, 30, 31]]
 target = dataSet.iloc[:, 5].values
 
 data = data.values
