@@ -9,10 +9,9 @@ data = dataSet.iloc[:, [9, 10, 12, 13, 14, 20, 21, 25, 31]]
 target = dataSet.iloc[:, 5].values
 
 dataTrain, dataTest, targetTrain, targetTest = train_test_split(data, target, test_size = .2)
+randomForestMachine = RandomForestClassifier(n_estimators = 21)
+randomForestMachine.fit(dataTrain, targetTrain)
 
-RandomForestMachine = RandomForestClassifier(n_estimators = 21)
-RandomForestMachine.fit(dataTrain, targetTrain)
-
-predictions = RandomForestMachine.predict(dataTest)
+predictions = randomForestMachine.predict(dataTest)
 
 print(accuracy_score(targetTest, predictions))
