@@ -21,9 +21,9 @@ dataTrain, dataTest, targetTrain, targetTest = train_test_split(data, target, te
 
 scoreMap = defaultdict(list) 
 
-for j in range (0, 150):
+for j in range (0, 500):
 	for i in range (1, 26):		
-		knn = KNeighborsClassifier(n_neighbors = i)
+		knn = KNeighborsClassifier(n_neighbors = 9)
 		knn.fit(dataTrain, targetTrain)
 		predictions = knn.predict(dataTest)
 
@@ -32,3 +32,7 @@ for j in range (0, 150):
 		scoreMap[i].append(aS)
 
 		i = i + 1
+	j = j + 1
+
+for i in range (1, 26):
+	print(i, sum(scoreMap[i]) / 500)
