@@ -19,20 +19,11 @@ for value in target:
 
 dataTrain, dataTest, targetTrain, targetTest = train_test_split(data, target, test_size = .2)
 
-scoreMap = defaultdict(list) 
 
-for j in range (0, 500):
-	for i in range (1, 26):		
-		knn = KNeighborsClassifier(n_neighbors = 9)
-		knn.fit(dataTrain, targetTrain)
-		predictions = knn.predict(dataTest)
+knn = KNeighborsClassifier(n_neighbors = 9)
+knn.fit(dataTrain, targetTrain)
+predictions = knn.predict(dataTest)
 
-		aS = accuracy_score(targetTest, predictions)
+aS = accuracy_score(targetTest, predictions)
 
-		scoreMap[i].append(aS)
-
-		i = i + 1
-	j = j + 1
-
-for i in range (1, 26):
-	print(i, sum(scoreMap[i]) / 500)
+print(aS)
