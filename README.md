@@ -26,6 +26,8 @@ cleanData.py
 python3 cleanData.py
 ```
 
+**Make sure to run cleanData.py before running any of the machine learning programs**
+
 crimeForest.py
 -
 - This file is where a random forest machine is used to predict the crime IUCR
