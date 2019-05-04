@@ -8,6 +8,10 @@ pip install regex
 pip install scikit-learn
 ```
 
+The data-set used in this project is available here
+- 
+- https://wetransfer.com/downloads/b7fc20cb9d54ee20e0b2fae325225bd120190428122621/ac6553
+
 File breakdown
 -
 
