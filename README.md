@@ -12,6 +12,9 @@ The data-set used in this project is available here
 - 
 - https://wetransfer.com/downloads/b7fc20cb9d54ee20e0b2fae325225bd120190428122621/ac6553
 
+I am trying to train a variety of machines to learn the unique crime codes of Chicago 
+-
+
 File breakdown
 -
 
